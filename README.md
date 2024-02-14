@@ -6,7 +6,7 @@
 **멀티캠퍼스 백엔드 과정** 22차 수강 중
 
 ## 목표
-- 교육과정 내에 멋있는 스프링 프로젝트 완성하기! ✌️
+- 교육기간 내에 멋있는 스프링 프로젝트 완성하기! ✌️
 
 ## 백준 알고리즘 랭킹
 [![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=chris309804)](https://solved.ac/chris309804/)
