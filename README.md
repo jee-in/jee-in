@@ -1,4 +1,4 @@
-![헤더](https://capsule-render.vercel.app/api?type=rounded&height=300&color=gradient&text=Input%20text&section=header)
+![헤더](https://capsule-render.vercel.app/api?type=rounded&height=150&color=gradient&text=Jeein's%20Code%20Log&section=header&fontAlign=50&descAlign=36)
 
 <!--
 **jee-in/jee-in** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
