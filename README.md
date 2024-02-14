@@ -1,5 +1,7 @@
 ![헤더](https://capsule-render.vercel.app/api?type=venom&height=150&color=gradient&text=Jeein's%20Code%20Log&section=header&fontAlign=50&descAlign=36&fontColor=black)
 
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fjee-in&count_bg=%231E2399&title_bg=%2377B8DD&icon=statuspage.svg&icon_color=%23E7E7E7&title=visitors&edge_flat=false)](https://hits.seeyoufarm.com)
+
 <!--
 **jee-in/jee-in** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
