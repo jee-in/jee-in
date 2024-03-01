@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>닭다리 왔다갔다</title>
+
+  <style>
+    #wrapper {
+      width: 1000px;
+      height: 1000px;
+      margin: auto;
+      background-color: grey;
+    }
+
+    #header {
+      box-sizing: border-box;
+      width: 100%;
+      height: 200px;
+      padding: 30px 250px;
+      display: flex;
+      background-color: rgb(38, 183, 240);
+    }
+
+    #content {
+      /*width에 지정한 크기: content+padding+border를 합한 값*/
+      box-sizing: border-box;
+      width: 100%;
+      height: 800px;
+      padding: 50px;
+      background-color: skyblue;
+    }
+
+    /*닭다리가 이동하는 범위*/
+    #content #range {
+      position: relative;
+      width: 800px;
+      height: 700px;
+      margin: 0 90px;
+      border: 10px solid black;
+      border-top: 0;
+      border-bottom: 0;
+    }
+
+    #header button {
+      width: 12rem;
+      height: 6rem;
+      margin: auto;
+      border-radius: 1rem;
+      background-color: white;
+      border-color: #0d6efd;
+      font-weight: 700;
+      font-size: 2rem;
+
+      /*버튼에 마우스 커서를 올리면, 버튼 색이 진해지고 커서 모양이 손바닥으로 변경됨*/
+      &:hover {
+        background-color: #0d6efd;
+        border-color: #0d6efd;
+        cursor: pointer;
+      }
+    }
+
+    #range img#pic {
+      width: 50px;
+      height: 50px;
+      position: absolute;
+    }
+  </style>
+  <script>
+    /*-----------------------------
+    최소값과 최대값을 지정하여 반환되는 랜덤
+    ------------------------------*/
+    function getRandomByRange(min, max) {
+      let num = min + getRandom(max - min);
+      return num;
+    }
+
+  </script>
+  <script>
+    // 전역 변수 선언
+    let pic; // 닭다리 이미지
+    let x = 0; // 닭다리의 x축 위치
+    let y = 0; // 닭다리의 x축 위치
+    let targetX; // 닭다리의 목표 x축 위치
+    let targetY; // 닭다리의 목표 y축 위치
+    let pmX = 1; // 닭다리의 x축 이동 방향(+, -) 
+
+    let hopY; // 닭다리의 y축 이동 단위
+    let status = false; // 닭다리 자동 이동 상태
+    let btnAuto; // [자동] 버튼 요소
+    let btnMan; // [수동] 버튼 요소
+
+    // 닭다리 위치 초기화 (body 기준 절대 위치)
+    function init() {
+      pic = document.getElementById("pic");
+      pic.style.position = "absolute";
+      pic.style.left = 1 + "px";
+      pic.style.top = 0 + "px";
+    }
+
+    // 닭다리가 시작점 또는 도착점에 도착할 때마다 targetY 값을 랜덤으로 생성하는 함수
+    function randomTargetY() {
+      y = parseInt(pic.style.top); // 시작점 또는 도착점에 도착했을 때 닭다리의 y 위치
+      targetY = getRandomByRange(0, 650); // 닭다리의 top이 0부터 700-50(이미지 크기) 사이에 올 수 있는 범위에서 targetY 값 생성
+      hopY = (targetY - y) / 150;         // targetY까지 150번(750/5)에 나누어서 이동
+    }
+
+    function move() {
+      x = parseInt(pic.style.left);
+
+      // 닭다리가 시작점 또는 도착점에 닿으면, 이동 방향 전환
+      if (x <= 0 || x >= (800 - 50)) {
+        targetX >= (800 - 50); // 도착점의 x 위치는 닭다리 이미지의 left가 800-50(이미지 크기)이 될 때로 설정
+        pmX = pmX * -1; // + 방향
+        randomTargetY();
+      }
+
+      // x축 기준 + 또는 - 방향으로 5씩 이동
+      x += pmX * 5;
+      pic.style.left = x + "px";
+
+      // y축 기준 + 또는 - 방향으로 이동
+      y += hopY;
+      pic.style.top = y + "px";
+    }
+
+    // 01. 수동 이동
+    function moveMan() {
+      move();
+    }
+
+    // 02. 자동 이동
+    function moveAuto() {
+      if (status == true) {
+        // [자동] 버튼을 선택할 경우, 닭다리 이동을 시작하고 버튼 색을 변경함
+        btnAuto.style.backgroundColor = "#0064f9";
+        setInterval("move()", 10);
+      } else {
+        // [자동] 버튼을 해제할 경우, 페이지를 리로드함
+        window.location.reload();
+      }
+    }
+
+    // 브라우저 실행 시, 다음 함수들을 수행함
+    addEventListener("load", function () {
+      init();
+
+      btnMan = document.getElementById("btnMan");
+      btnAuto = document.getElementById("btnAuto");
+
+      //moveMan(); // [수동] 버튼 클릭 시
+      btnMan.addEventListener("click", function () {
+        moveMan();
+      })
+
+      //moveAuto(); // [자동] 버튼 클릭 시
+      btnAuto.addEventListener("click", function () {
+        status = (status == false) ? true : false;
+        moveAuto();
+      })
+    });
+
+  </script>
+</head>
+
+<body>
+  <div id="wrapper">
+    <div id="header">
+      <button id="btnMan">수동</button>
+      <button id="btnAuto">자동</button>
+    </div>
+    <div id="content">
+      <div id="range">
+        <img src="./img/chicken.webp" id="pic">
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
