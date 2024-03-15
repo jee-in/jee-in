@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: table</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <style>
+
+        table#default {
+            /*
+            -- user agent stylesheet
+            display: table;
+            border-collapse: separate;
+            box-sizing: border-box;
+            text-indent: initianl;
+            border-spacing: 2px;
+            border-color: gray;
+
+            -- computed
+            border-width: 1.5px;
+            border-style: none;
+            border-color: gray; -- rgb(128, 128, 128)
+
+            border-spacing:
+            */
+
+            text-align: center;
+            font-family: "Nanum Pen Script", cursive;
+            font-size: 20px;
+        }
+
+        table#table-only {
+
+            /* 테이블 전체를 하나의 box로 인식 */
+            border-width: medium; 
+            border-style:solid; 
+            border-color: darkgray;
+
+            padding: 30px; 
+            background-color: lightgray;
+        
+            text-align: center;
+            font-family: "Nanum Pen Script", cursive;
+            font-size: 20px;
+
+            /* <table> 태그의 속성 */
+            border-spacing: 20px; /* 각 셀의 상하좌우 여백 */
+        }
+
+        table#td-only td{ 
+            border-width: medium;
+            border-style: solid;
+            border-color: mediumslateblue;
+
+            padding: 20px;
+            background-color:lightgreen;
+
+            text-align: center;
+            font-family: "Nanum Pen Script", cursive;
+            font-size: 20px;
+        }
+
+        table#all-sep {
+            border-width: medium;
+            border-style: solid;
+            border-color: darkgray;
+
+            padding: 10px;
+            background-color:lightgray;
+
+            /* <table> 태그에 적용된 font 속성은 <td> 태그로 상속됨 */
+            text-align: center;
+            font-family: "Nanum Pen Script", cursive;
+            font-size: 20px;
+
+            /* <table> 태그의 속성 */
+            border-spacing: 30px; /* 각 셀의 상하좌우 여백 */
+        }
+
+        table#all-sep td {
+            border-width: medium;
+            border-style: solid;
+            border-color: mediumslateblue;
+
+            padding: 10px;
+            background-color:lightgreen;
+        }
+
+        table#all-colla {
+            border-width: medium;
+            border-style: solid;
+            border-color: darkgray;
+
+            /* padding: 10px;
+            -- 주의: border-collapse: collapse인 경우 적용되지 않음 */
+            background-color:lightgray;
+
+            /* <table> 태그에 적용된 font 속성은 <td> 태그로 상속됨 */
+            text-align: center;
+            font-family: "Nanum Pen Script", cursive;
+            font-size: 20px;
+
+            /* <table> 태그의 속성 */ 
+            /* border-spacing: 30px; 
+            -- 각 셀의 상하좌우 여백을 지정
+            -- 주의: border-collapse: collapse인 경우 적용되지 않음 */
+            border-collapse: collapse;
+        }
+
+        table#all-colla td {
+            border-width: medium;
+            border-style: solid;
+            border-color: mediumslateblue;
+
+            padding: 10px;
+            background-color:lightgreen;
+        }
+
+        ol {
+            list-style-type:upper-roman;
+        }
+
+        </style>
+</head>
+<body>
+    <h1>🔎 CSS 속성 탐구 - table</h1>
+    <h2>1. border와 padding</h2>
+    <p>
+        &lt;table&gt; 태그의 border 또는 padding과 관련된 속성은 &lt;td&gt; 태그로 상속되지 않습니다.<br>
+        두 태그 중 하나에만 속성을 적용했을 때와 두 태그 모두에 속성을 적용했을 때 테이블을 어떻게 보이는지 탐구해보겠습니다.
+    </p>
+    
+    <h3>❍ default</h3>
+    <table id="default"></table>
+
+    <h3>❍ &lt;table&gt; 태그에만 스타일 적용</h3>
+    <table id="table-only"></table>
+
+    <h3>❍ &lt;td&gt; 태그에만 스타일 적용</h3>
+    <table id="td-only"></table>
+
+    <h3>❍ 종합</h3>
+    <h4>■ border-collapse: separate</h4>
+    <table id="all-sep"></table>
+    <h4>■ border-collapse: collapse</h4>
+    <table id="all-colla"></table>
+    
+    
+    <script>
+        let tbody = `
+        <tbody>
+        <tr>
+            <td>음료</td>
+            <td>가격</td>
+            <td>개수</td>
+        </tr>
+        <tr>
+            <td>사과 케일</td>
+            <td>3000원</td>
+            <td>1개</td>
+        </tr>
+        <tr>
+            <td>딸기 오렌지</td>
+            <td>4000원</td>
+            <td>2개</td>
+        </tr>
+        <tr>
+            <td>호두 바나나</td>
+            <td>5000원</td>
+            <td>3개</td>
+        </tr>
+    </tbody>
+        `
+
+        document.getElementById("default").innerHTML = tbody;
+        document.getElementById("table-only").innerHTML = tbody;
+        document.getElementById("td-only").innerHTML = tbody;
+        document.getElementById("all-sep").innerHTML = tbody;
+        document.getElementById("all-colla").innerHTML = tbody;
+
+    </script>
+</body>
+</html>
