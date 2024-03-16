@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>적용_칠판</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../blackboard.css">
+    <script src="../blackboard.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <h1>테이블로 칠판 만들기</h1>
+            <p id="mode">
+                border-collapse
+                <label class="switch">
+                    <input type="checkbox">
+                    <span class="slider"></span>
+                </label>
+            </p>
+            <button class="btn btn_default">default</button>
+            <div class="container">
+                <div class="table-container">
+                    <table id="table"></table>
+                </div>
+                <div id="button-container">
+                    <div class="compare">
+
+                        <div class="btn_line">
+                            <div class="btn_box">
+                                <button class="btn btn_table_background">table-background</button>
+                            </div>
+                            <div class="desc">
+                                
+                            </div>
+                        </div>
+                        <div class="btn_line">
+                                <div class="btn_box">
+                                    <button class="btn btn_table_border">table-border</button>
+                                </div>
+                                <div class="desc">
+                                    
+                                </div>
+                        </div>
+
+                        <div id="desc">
+                            <div class="btn_line">
+                            <div class="btn_box">
+                                <button class="btn btn_table_padding">table-padding</button>
+                            </div>
+                            <div class="desc">
+                                table 태그에 padding 속성을 적용합니다.
+                            </div>
+                            </div>
+                        </div>
+                        
+                        <div class="btn_line">
+                            <div class="btn_box">
+                                <button class="btn btn_borderSpacing">border-spacing</button>
+                            </div>
+                            <div class="desc">
+    
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="compare">
+                        <div class="btn_line">
+                            <div class="btn_box">
+                                <button class="btn btn_td_background">td-background</button>
+                            </div>
+                            <div class="desc">
+                                
+                            </div>
+                        </div>
+
+                        <div class="btn_line">
+                            <div class="btn_box">
+                                <button class="btn btn_td_border">td-border</button>
+                            </div>
+                            <div class="desc">
+                                
+                            </div>
+                        </div>
+
+                        <div class="btn_line">
+                            <div class="btn_box">
+                                <button class="btn btn_td_padding">td-padding</button>
+                            </div>
+                            <div class="desc">
+                                
+                            </div>
+                        </div>
+
+                    </div>
+
+
+
+
+                    </div>
+                </div>
+    </div>
+</body>
+</html>
