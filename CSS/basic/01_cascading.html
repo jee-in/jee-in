@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS: Cascading</title>
+</head>
+<style>
+    a {
+        color:brown;
+    }
+</style>
+
+<body>
+    <h1>🎨 CSS 기초 - 01. Cascading</h1>
+    <h2>짠</h2>
+    <p>
+        하나의 요소에 둘 이상의 스타일이 적용될 때 CSS에서는 우선순위에 따라 스타일을 결정한다.<br>
+        우선순위는 스타일 규칙의 중요도에 따라 결정되고 부모 요소에서 자식 요소로, 즉 위에서 아래로 갈수록 높아진다.
+    </p>
+
+    <h3>1. 스타일 우선 순위</h2>
+    <h4>(1) </h4>
+    <p>
+        웹 브라우저의 내용을 표시할 때에는 단순히 CSS 소스의 스타일만 적용되는 것은 아니다.
+        브라우저 기본 스타일: 웹 브라우저 자체에 내장된 기본 스타일 시트
+        개발자가 지정한 스타일
+        컴퓨터 사용자가 지정한 스타일
+    </p>
+    <h4>(2) 개별성 규칙에 따른 점수 순위</h4>
+    <p>
+        !important -> 인라인 스타일보다 우선순위가 높다. 10000점
+        인라인 스타일 1000점
+        id 스타일 100점
+        클래스 스타일 10점 
+        타입 스타일(태그) 1점 -> nav > h2 이런 식으로 태그가 두 개 쓰이면 2점!
+        전체 선택자 0점
+    </p>
+    <p>참고: <a href="https://specificity.keegan.st">개별성 규칙 점수를 계산해 주는 사이트</a></p>
+    <h4>(3) </h4>
+    <p>
+        소스 코드에서 스타일을 정의한 순서
+    </p>
+    
+    <h3>2. 스타일 상속</h3>
+    <h4>상속되지 않는 스타일</h4>
+    <ul>
+        <li>배경색, 배경 이미지</li>
+        <li>테두리 두께, 테두리 스타일, 테두리 색</li>
+        <li>outline color</li>
+        <li>display - inline, block, inline-block, table...</li>
+        <li>float, overflow, z-index</li>
+        <li>width, height</li>
+        <li>top</li>
+        <li>padding, margin</li>
+        <li>text-decoration</li>
+        <li>vertical-align - 인라인 요소와 테이블 셀에 적용됨</li>
+    </ul>
+    <h4>상속되는 스타일</h4>
+    <ul>
+        <li>text-indent</li>
+        <li>text-align</li>
+        <li>list-style</li>
+        <li>word-spacing</li>
+    </ul>
+    <p>참고: <a href="https://www.w3.org/TR/CSS21/propidx">상속되는 속성과 안 되는 속성을 알려주는 사이트</a></p>
+
+    <div>
+        <p>참고 자료</p>
+        <li>이지스퍼블리싱</li>
+        <li>길벗</li>
+    </div>
+</body>
+</html>
