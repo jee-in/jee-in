@@ -1,10 +1,12 @@
 ![헤더](https://capsule-render.vercel.app/api?type=venom&height=150&color=gradient&text=project%20portfolio&section=header&fontAlign=50&descAlign=36&fontColor=black)
 
 ## 교육 이력
-**멀티캠퍼스 백엔드 과정** 22차 수강 중
+**멀티캠퍼스 Java 백엔드 과정** 22차(2024.02.01.-2024.06.25.) 수료 예정
 
 ## 목표
-- 교육기간 내에 멋있는 스프링 프로젝트 완성하기! ✌️
+- 트러블 슈팅에 강한 개발자
+- 운영체제의 동작 원리를 이해하는 개발자
+- 오픈 소스에 기여하는 개발자
 
 <!--
 **jee-in/jee-in** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
