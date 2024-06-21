@@ -1,11 +1,11 @@
-![헤더](https://capsule-render.vercel.app/api?type=venom&height=150&color=gradient&text=Jeein's%20Code%20Log&section=header&fontAlign=50&descAlign=36&fontColor=black)
+![헤더](https://capsule-render.vercel.app/api?type=venom&height=150&color=gradient&text=project%20portfolio&section=header&fontAlign=50&descAlign=36&fontColor=black)
 
 ## 교육 이력
 **멀티캠퍼스 백엔드 과정** 22차 수강 중
 
 ## 목표
 - 교육기간 내에 멋있는 스프링 프로젝트 완성하기! ✌️
-- 
+
 <!--
 **jee-in/jee-in** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
