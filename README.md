@@ -1,7 +1,5 @@
 ![헤더](https://capsule-render.vercel.app/api?type=venom&height=150&color=gradient&text=Jeein's%20Code%20Log&section=header&fontAlign=50&descAlign=36&fontColor=black)
 
-![이미지](https://github.com/jee-in/mini_homepage/blob/main/astronaut.jpg)
-
 ## 교육 이력
 **멀티캠퍼스 백엔드 과정** 22차 수강 중
 
