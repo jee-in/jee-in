@@ -1,22 +1,18 @@
-![헤더](https://capsule-render.vercel.app/api?type=venom&height=150&color=gradient&text=Jeein's%20Code%20Log&section=header&fontAlign=50&descAlign=36&fontColor=black)
-
-![이미지](https://github.com/jee-in/mini_homepage/blob/main/astronaut.jpg)
+안녕하세요.
+같이 또 혼자 일하는 개발 문화의 매력에 끌려 개발자의 길을 걷게 된 열정 가득한 새싹입니다.
 
 ## 교육 이력
-**멀티캠퍼스 백엔드 과정** 22차 수강 중
+**멀티캠퍼스 Java 백엔드 과정** 22차(2024.02.01.-2024.06.25.) 수료 예정
 
 ## 목표
-- 교육기간 내에 멋있는 스프링 프로젝트 완성하기! ✌️
+- 트러블 슈팅에 강한 개발자
+- 운영체제의 동작 원리를 이해하는 개발자
+- 오픈 소스에 기여하는 개발자
 
-## 백준 알고리즘 랭킹
-[![Solved.ac Profile](http://mazassumnida.wtf/api/v2/generate_badge?boj=chris309804)](https://solved.ac/chris309804/)
+## FE
+- [FE 프로젝트](https://jee-in.github.io/jee-in/)
 
-## 깃허브 랭킹
-[![jee-in's GitHub stats](https://github-readme-stats.vercel.app/api?username=jee-in)](https://github.com/anuraghazra/github-readme-stats)
-
-## 방문자 수
-
-[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Fjee-in&count_bg=%231E2399&title_bg=%2377B8DD&icon=statuspage.svg&icon_color=%23E7E7E7&title=visitors&edge_flat=false)](https://hits.seeyoufarm.com)
+## BE
 
 
 <!--
