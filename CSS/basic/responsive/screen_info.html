@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>스크린 크기 | CSS 기초 실습</title>
+    <style>
+        .wrap {
+            width: 80vw;
+            height: 150vh;
+            margin: 10vh 10vw;
+        }
+
+        table {
+            width: 50vw;
+            border-collapse: collapse;
+            font-size: 1vw;
+            text-align: center;
+        }
+        
+        th, td {
+            border: 1px solid black;
+            padding: 1vw;
+        }
+
+        footer {
+            margin-top: 5vh;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h2>현재 기기의 화면 크기와 높이를 확인해 보세요.</h2>
+        <div id="width-info-box">
+        </div>
+        <footer>
+            <p>각주</p>
+            <p id="footnote1">
+                <small>1</small> 색 심도
+                <ul>
+                    <li><a href="https://news.samsungdisplay.com/14657" target="_blank">[SAMSUNG DISPLAY NEWSROOM] 디스플레이 색심도(Color Depth)의 이해</a></li>
+                    <li><a href="https://www.w3schools.com/jsref/prop_screen_colordepth.asp" target="_blank">[w3schools] Window screen.colorDepth</a></li>
+                </ul>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        let width_info = `<table>
+                            <thead>
+                                <tr>
+                                    <th>구분</th>
+                                    <th>크기</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>현재 기기 스크린 너비 | 사용 가능 / 전체
+                                        </td>
+                                    <td>${screen.availWidth}px / ${screen.width}px</td>
+                                </tr>
+                                    <td>현재 윈도우 창의 너비 | 사용 가능 / 전체
+                                        <br>스크롤바를 제외한 너비
+                                        <br>배율을 높이면 수치가 작아짐
+                                    </td>
+                                    <td>${document.documentElement.clientWidth} / ${window.innerWidth}</td>
+                                </tr>
+                                <tr>
+                                    <td>현재 기기의 사용 가능한 스크린 너비 / 전체 스크린 높이
+                                        <br>(작업 표시줄을 제외한 높이)</td>
+                                    <td>${screen.availHeight}px / ${screen.height}px</td>
+                                </tr>
+                                <tr>
+                                    <td>색 심도<sup><a href="#footnote1">1</a></sup> (Color Depth, 픽셀당 색 표현을 위한 비트 수)</td>
+                                    <td>${screen.colorDepth}bit</td>
+                                </tr>
+                            <tbody>
+                        </table>`
+
+        document.getElementById("width-info-box").innerHTML = width_info;
+
+    </script>
+</body>
+</html>

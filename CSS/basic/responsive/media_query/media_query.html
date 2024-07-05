@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미디어 쿼리 | CSS 기초 실습</title>
+
+    <!-- 반응형으로 동작할 영역을 지정 -->
+    <link rel="stylesheet" href="viewport.css">
+
+    <!-- 미디어 쿼리를 외부 CSS 파일에서 설정했다면, 다음과 같이 외부 파일을 연결할 수 있습니다. -->
+    <!-- (1) link 이용 (미디어 유형을 지정할 수 있습니다.) -->
+    <!-- 
+        <link rel="stylesheet" media="screen" href="media_query.css">
+    -->
+    <!-- (2) import 이용 (미디어 유형과 조건을 지정할 수 있습니다.) -->
+    <!-- 
+        <style>
+            @import url("media_query.css") // only screen and (min-width: 321px)
+        </style>
+    -->
+
+    <style>
+        @media screen and (max-width: 1024px) {
+            .responsive-box {
+                background: url(img/jeju_cave.JPEG) no-repeat;
+                background-size: contain;
+                background-position: center top;
+                background-attachment: local;
+            }
+        }
+
+        @media screen and (max-width: 768px) {
+            .responsive-box {
+                background: url(img/bazil.JPEG) no-repeat;
+                background-size: contain;
+                background-position: center top;
+                background-attachment: local;
+            }
+        }
+
+        @media screen and (max-width: 320px) {
+            .responsive-box {
+                background: url(img/jeju_oreum.JPEG) no-repeat;
+                background-size: contain;
+                background-position: center top;
+                background-attachment: local;
+            }
+        }
+    </style>
+
+    <!-- 웹 문서에서 미디어 쿼리를 직접 정의하는 방법으로 다음과 같이 style 태그의 media 속성을 이용하는 방법도 있습니다. -->
+    <!--
+        <style media="screen and(max-width: 320px)">
+            body {
+                background-color: yellow;
+            }
+        </style>
+    -->
+
+    <!-- 현재 화면 크기를 사용자에게 보여 주기 위한 스크립트 -->
+    <script src="display_width.js"></script>
+</head>
+<body>
+    <div class="wrap">
+        <h2>반응형 웹</h2>
+        <p>화면 크기를 조절해 보세요. 화면 크기에 따라 배경 이미지가 교체됩니다.</p>
+
+        <div class="responsive-box">
+            <p class="width-text">현재 화면 크기: <span class="width-text" id="current-width"></span></p>
+        </div>
+    </div>
+</body>
+</html>

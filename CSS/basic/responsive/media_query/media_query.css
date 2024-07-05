@@ -1,0 +1,26 @@
+@media screen and (max-width: 1024px) {
+    .responsive-box {
+        background: url(img/jeju_cave.JPEG) no-repeat;
+        background-size: contain;
+        background-position: center top;
+        background-attachment: local;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .responsive-box {
+        background: url(img/bazil.JPEG) no-repeat;
+        background-size: contain;
+        background-position: center top;
+        background-attachment: local;
+    }
+}
+
+@media screen and (max-width: 320px) {
+    .responsive-box {
+        background: url(img/jeju_oreum.JPEG) no-repeat;
+        background-size: contain;
+        background-position: center top;
+        background-attachment: local;
+    }
+}
